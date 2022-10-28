@@ -17,7 +17,7 @@ const connectionParams={
     //useCreateIndex: true,
     useUnifiedTopology: true 
 }
-mongoose.connect(url,connectionParams)
+mongoose.connect(process.env.ATLAS_URL || url,connectionParams)
     .then( () => {
         console.log('Connected to the database ')
     })
