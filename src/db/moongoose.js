@@ -19,7 +19,7 @@ const connectionParams={
 }
 mongoose.connect(process.env.ATLAS_URL || url,connectionParams)
     .then( () => {
-        console.log('Connected to the database ')
+        console.log('Connected to the Atlas-remote ')
     })
     .catch( (err) => {
         console.error(`Error connecting to the database. n${err}`);
