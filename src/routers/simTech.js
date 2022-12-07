@@ -42,7 +42,7 @@ router.get('/simTechs',async  (req, res) =>{
 
 router.get('/simTechsOnly',async  (req, res) =>{
     try{
-        const simTechs = await SimTech.find({$or:[{"position" : "Sim Tech IV"},{"position" : "Sim Tech III"},{"position" : "Sim Tech II"},{"position" : "Sim Tech I"}]})
+        const simTechs = await SimTech.find({$or:[{"position" : "A/C Sim Tech IV"},{"position" : "A/C Sim Tech III"},{"position" : "A/C Sim Tech II"},{"position" : "A/C Sim Tech I"}]})
         res.status(201).send(simTechs)
     }catch(e) {
         res.status(500)

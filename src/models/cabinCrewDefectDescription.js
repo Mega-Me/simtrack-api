@@ -1,20 +1,13 @@
 const mongoose = require('mongoose')
 
-const defectDescriptionSchema = new mongoose.Schema({
+const cabinCrewDefectDescriptionSchema = new mongoose.Schema({
     selectedSimulator :{
         type: String
     },
-    trainingType :{
+    instructorName :{
         type: String
     },
-    flightCrew :{
-        type: String
-    },
-    captName1 :{
-        type: String,
-        trim: true
-    },
-    captId1 :{
+    instructorId :{
         type: String
     },
     defectDescription :{
@@ -38,6 +31,6 @@ const defectDescriptionSchema = new mongoose.Schema({
     timestamps: true
 })
 
-const DefectDescription = mongoose.model('DefectDescription', defectDescriptionSchema )
+const CabinCrewDefectDescription = mongoose.model('CabinCrewDefectDescription', cabinCrewDefectDescriptionSchema )
 
-module.exports = DefectDescription
+module.exports = CabinCrewDefectDescription

@@ -49,5 +49,4 @@ router.patch('/updateTrainingSession/:id',async (req, res) =>{
     }
 })
 
-
 module.exports = router
